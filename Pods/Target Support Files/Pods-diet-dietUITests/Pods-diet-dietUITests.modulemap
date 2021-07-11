@@ -1,0 +1,6 @@
+framework module Pods_diet_dietUITests {
+  umbrella header "Pods-diet-dietUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
