@@ -17,5 +17,6 @@ target 'diet' do
   end
 
 pod 'Firebase/Analytics'
+pod 'Firebase/Auth'
 
 end

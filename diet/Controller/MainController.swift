@@ -256,6 +256,12 @@ class MainController: UIViewController,WKUIDelegate,WKNavigationDelegate {
         return bool
     }
     
+    func splash(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.splashview.isHidden = false
+        }
+    }
+    
     @IBAction func backpress(_ sender: Any) {
         yesterday(year: yearint, month: monthint, day: dayint)
         day.text = printweek(day: weekday()!)
@@ -289,10 +295,6 @@ class MainController: UIViewController,WKUIDelegate,WKNavigationDelegate {
         
         rightimg.alpha = 0.5
         nextbtn.isHidden = true
-        
-        
-        
-        
         
         // Do any additional setup after loading the view.
     }

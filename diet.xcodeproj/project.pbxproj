@@ -34,6 +34,9 @@
 		AC57E640269C81E0007BA792 /* weight.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57E63E269C81E0007BA792 /* weight.png */; };
 		AC57E641269C81E0007BA792 /* weightpointer.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57E63F269C81E0007BA792 /* weightpointer.png */; };
 		AC57E648269C84EF007BA792 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57E647269C84EF007BA792 /* LoginController.swift */; };
+		AC57E64A269E8BBD007BA792 /* whitecheck.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57E649269E8BBD007BA792 /* whitecheck.png */; };
+		AC57E64D269F1404007BA792 /* hideeyes.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57E64B269F1403007BA792 /* hideeyes.png */; };
+		AC57E64E269F1404007BA792 /* openeyes.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57E64C269F1404007BA792 /* openeyes.png */; };
 		D4F9603ACCD134CE6D6F8397 /* Pods_diet_dietUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0870904A9632D7686757DD7 /* Pods_diet_dietUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +95,9 @@
 		AC57E63E269C81E0007BA792 /* weight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = weight.png; path = ../../Downloads/weight.png; sourceTree = "<group>"; };
 		AC57E63F269C81E0007BA792 /* weightpointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = weightpointer.png; path = ../../Downloads/weightpointer.png; sourceTree = "<group>"; };
 		AC57E647269C84EF007BA792 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		AC57E649269E8BBD007BA792 /* whitecheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitecheck.png; sourceTree = "<group>"; };
+		AC57E64B269F1403007BA792 /* hideeyes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hideeyes.png; sourceTree = "<group>"; };
+		AC57E64C269F1404007BA792 /* openeyes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = openeyes.png; sourceTree = "<group>"; };
 		DB06863CEBBCE1F60D0742C0 /* Pods_dietTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dietTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0870904A9632D7686757DD7 /* Pods_diet_dietUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_diet_dietUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7B4647FDFF3EA9AEA5B7FA4 /* Pods_diet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_diet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,12 +203,15 @@
 				AC57E630269B13B8007BA792 /* carrot.PNG */,
 				AC57E631269B13B8007BA792 /* weightimg.PNG */,
 				AC57E6272699E468007BA792 /* run2.png */,
+				AC57E64B269F1403007BA792 /* hideeyes.png */,
+				AC57E64C269F1404007BA792 /* openeyes.png */,
 				AC57E636269BFD57007BA792 /* man.png */,
 				AC57E63E269C81E0007BA792 /* weight.png */,
 				AC57E63F269C81E0007BA792 /* weightpointer.png */,
 				AC57E6242699DA4A007BA792 /* circle.png */,
 				AC57E634269B2138007BA792 /* greenbtn.png */,
 				AC57E62026998B5E007BA792 /* ripol.png */,
+				AC57E649269E8BBD007BA792 /* whitecheck.png */,
 				AC57E638269C0302007BA792 /* runningman.png */,
 				AC57E62226998C5F007BA792 /* bigrecshadow.png */,
 				AC57E61C26998A67007BA792 /* lepol.png */,
@@ -347,12 +356,15 @@
 				AC57E61D26998A67007BA792 /* lepol.png in Resources */,
 				AC57E632269B13B8007BA792 /* carrot.PNG in Resources */,
 				AC57E62A2699E468007BA792 /* run2.png in Resources */,
+				AC57E64A269E8BBD007BA792 /* whitecheck.png in Resources */,
 				AC57E62126998B5E007BA792 /* ripol.png in Resources */,
 				AC57E5EA26995DD0007BA792 /* LaunchScreen.storyboard in Resources */,
 				AC57E641269C81E0007BA792 /* weightpointer.png in Resources */,
 				AC57E637269BFD57007BA792 /* man.png in Resources */,
+				AC57E64E269F1404007BA792 /* openeyes.png in Resources */,
 				AC57E635269B2138007BA792 /* greenbtn.png in Resources */,
 				AC57E62D269A8118007BA792 /* GoogleService-Info.plist in Resources */,
+				AC57E64D269F1404007BA792 /* hideeyes.png in Resources */,
 				AC57E639269C0302007BA792 /* runningman.png in Resources */,
 				AC57E5E726995DD0007BA792 /* Assets.xcassets in Resources */,
 				AC57E61B2699830E007BA792 /* barbackground.png in Resources */,
