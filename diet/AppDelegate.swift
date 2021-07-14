@@ -10,12 +10,31 @@ import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var window: UIWindow?
+    var idstring : String = ""
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        let namekey = UserDefaults.standard.string(forKey: "id")
+        print(namekey)
+        if let name = namekey {
+            idstring=name
+        if(!namekey!.isEmpty){
+            let storyboard = UIStoryboard(name: "second", bundle: nil)
+            
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "home")
+            
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+        }
+        }
+        
+        
         return true
     }
 

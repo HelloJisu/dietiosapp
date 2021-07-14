@@ -11,6 +11,7 @@ import SystemConfiguration
 
 class MainController: UIViewController,WKUIDelegate,WKNavigationDelegate {
     
+    @IBOutlet weak var splashview: UIView!
     @IBOutlet weak var rightimg: UIImageView!
     @IBOutlet weak var record: UILabel!
     @IBOutlet weak var name: UILabel!
@@ -28,6 +29,7 @@ class MainController: UIViewController,WKUIDelegate,WKNavigationDelegate {
     @IBOutlet weak var suncheck: UIImageView!
     @IBOutlet weak var nextbtn: UIButton!
     @IBOutlet weak var backbtn: UIButton!
+    @IBOutlet weak var weightpointer: UIImageView!
     
     
     var date : String = ""
@@ -170,6 +172,17 @@ class MainController: UIViewController,WKUIDelegate,WKNavigationDelegate {
         todayyear = yearint
     }
     
+    func startanimation(){
+        
+        UIView.animate(withDuration: 0.5, delay: 0,animations: {
+            self.weightpointer.transform = CGAffineTransform(translationX: 45, y: 0)
+        })
+        UIView.animate(withDuration: 0.5, delay: 1, options: [.repeat , .autoreverse],animations: {
+            self.weightpointer.transform = CGAffineTransform(translationX: 0, y: 0)
+        })
+        
+    }
+    
     func yesterday(year : Int, month : Int, day : Int) {
         var newyear : Int = 0
         var newmonth: Int = 0
@@ -265,6 +278,8 @@ class MainController: UIViewController,WKUIDelegate,WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        startanimation()
+        
         loadWebPage("http://dbwltn0606.dothome.co.kr")
         settoday()
         day.text = printweek(day: weekday()!)
@@ -274,6 +289,8 @@ class MainController: UIViewController,WKUIDelegate,WKNavigationDelegate {
         
         rightimg.alpha = 0.5
         nextbtn.isHidden = true
+        
+        
         
         
         
