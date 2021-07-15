@@ -1,23 +1,26 @@
 //
-//  LoginController.swift
+//  IndexController.swift
 //  diet
 //
-//  Created by 유지수 on 2021/07/15.
+//  Created by 유지수 on 2021/07/12.
 //
 
 import UIKit
+import Firebase
 import FirebaseAuth
 
-class LoginController: UIViewController {
+class SigninController: UIViewController {
     
     @IBOutlet weak var passwordfield: UITextField!
     @IBOutlet weak var emailfield: UITextField!
+    @IBOutlet weak var namefield: UITextField!
     @IBOutlet weak var weightpointer: UIImageView!
     @IBOutlet weak var splashview: UIView!
     @IBOutlet weak var passwordeye: UIImageView!
     @IBOutlet weak var startbtn: UIButton!
     @IBOutlet weak var startimg: UIImageView!
     
+    var namestring : String = ""
     var emailstring : String = ""
     var passwordstring : String = ""
     var passwordclick : Bool = true
@@ -33,7 +36,9 @@ class LoginController: UIViewController {
         passwordfield.addTarget(self, action: #selector(password(textField:)), for: .editingChanged)
         
         emailfield.addTarget(self, action: #selector(email(textField:)), for: .editingChanged)
-
+        
+        namefield.addTarget(self, action: #selector(name(textField:)), for: .editingChanged)
+        
         startanimation()
 
         // Do any additional setup after loading the view.
@@ -60,8 +65,14 @@ class LoginController: UIViewController {
         emailstring=emailfield.text!
         check()
     }
+    
+    @objc func name(textField: UITextField) {
+        namestring=namefield.text!
+        check()
+    }
+    
     func check(){
-        if(emailstring != "" && passwordstring != ""){
+        if(emailstring != "" && namestring != "" && passwordstring != ""){
             startimg.alpha = 1
             startbtn.isHidden = false
         }else{
@@ -89,9 +100,9 @@ class LoginController: UIViewController {
     }
     
     @IBAction func startpress(_ sender: Any) {
-        Auth.auth().signIn(withEmail: emailstring, password: passwordstring) { [weak self] authResult, error in
+        Auth.auth().createUser(withEmail: emailstring, password: passwordstring) { authResult, error in
             
-            guard let mainpage = self?.storyboard?.instantiateViewController(withIdentifier: "home") as? MainController         else{
+            guard let mainpage = self.storyboard?.instantiateViewController(withIdentifier: "home") as? MainController         else{
                 return
             }
             
@@ -100,12 +111,9 @@ class LoginController: UIViewController {
             
             
             //인자값으로 다음 뷰 컨트롤러를 넣고 present 메소드를 호출합니다.
-            self!.present(mainpage, animated: false)
+            self.present(mainpage, animated: false)
             
-          guard let strongSelf = self else { return }
-          // ...
         }
-
 
     }
     
