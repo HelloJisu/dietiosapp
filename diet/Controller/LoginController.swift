@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class LoginController: UIViewController {
     
@@ -35,6 +36,11 @@ class LoginController: UIViewController {
         emailfield.addTarget(self, action: #selector(email(textField:)), for: .editingChanged)
 
         startanimation()
+        
+        if let user = Auth.auth().currentUser {
+                    emailfield.placeholder = "이미 로그인 된 상태입니다."
+                    passwordfield.placeholder = "이미 로그인 된 상태입니다."
+                }
 
         // Do any additional setup after loading the view.
     }
@@ -89,25 +95,25 @@ class LoginController: UIViewController {
     }
     
     @IBAction func startpress(_ sender: Any) {
-        Auth.auth().signIn(withEmail: emailstring, password: passwordstring) { [weak self] authResult, error in
-            
-            guard let mainpage = self?.storyboard?.instantiateViewController(withIdentifier: "home") as? MainController         else{
-                return
-            }
-            
-            //화면 전환 애니메이션을 설정합니다.
-            mainpage.modalPresentationStyle = .fullScreen
-            
-            
-            //인자값으로 다음 뷰 컨트롤러를 넣고 present 메소드를 호출합니다.
-            self!.present(mainpage, animated: false)
-            
-          guard let strongSelf = self else { return }
-          // ...
-        }
-
-
+        print("emailstring\(emailstring)")
+        print("passwordstring\(passwordstring)")
+        Auth.auth().signIn(withEmail: emailstring, password: passwordstring) { (user, error) in
+                    if user != nil{
+                        guard let mainpage = self.storyboard?.instantiateViewController(withIdentifier: "home") as? MainController         else{
+                            return
+                        }
+                        
+                        //화면 전환 애니메이션을 설정합니다.
+                        mainpage.modalPresentationStyle = .fullScreen
+                        
+                        
+                        //인자값으로 다음 뷰 컨트롤러를 넣고 present 메소드를 호출합니다.
+                        self.present(mainpage, animated: false)
+                    }
+                    else{
+                        print("login fail")
+                    }
+              }
     }
-    
 
 }

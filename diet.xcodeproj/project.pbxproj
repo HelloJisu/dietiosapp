@@ -38,6 +38,7 @@
 		AC57E64D269F1404007BA792 /* hideeyes.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57E64B269F1403007BA792 /* hideeyes.png */; };
 		AC57E64E269F1404007BA792 /* openeyes.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57E64C269F1404007BA792 /* openeyes.png */; };
 		AC57E65026A07BF7007BA792 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57E64F26A07BF7007BA792 /* LoginController.swift */; };
+		AC57E65226A2E8EC007BA792 /* mypage.png in Resources */ = {isa = PBXBuildFile; fileRef = AC57E65126A2E8EC007BA792 /* mypage.png */; };
 		D4F9603ACCD134CE6D6F8397 /* Pods_diet_dietUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0870904A9632D7686757DD7 /* Pods_diet_dietUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,7 @@
 		AC57E64B269F1403007BA792 /* hideeyes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hideeyes.png; sourceTree = "<group>"; };
 		AC57E64C269F1404007BA792 /* openeyes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = openeyes.png; sourceTree = "<group>"; };
 		AC57E64F26A07BF7007BA792 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		AC57E65126A2E8EC007BA792 /* mypage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mypage.png; sourceTree = "<group>"; };
 		DB06863CEBBCE1F60D0742C0 /* Pods_dietTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dietTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0870904A9632D7686757DD7 /* Pods_diet_dietUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_diet_dietUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7B4647FDFF3EA9AEA5B7FA4 /* Pods_diet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_diet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +204,7 @@
 		AC57E60D26995E6C007BA792 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				AC57E65126A2E8EC007BA792 /* mypage.png */,
 				AC57E630269B13B8007BA792 /* carrot.PNG */,
 				AC57E631269B13B8007BA792 /* weightimg.PNG */,
 				AC57E6272699E468007BA792 /* run2.png */,
@@ -370,6 +373,7 @@
 				AC57E64D269F1404007BA792 /* hideeyes.png in Resources */,
 				AC57E639269C0302007BA792 /* runningman.png in Resources */,
 				AC57E5E726995DD0007BA792 /* Assets.xcassets in Resources */,
+				AC57E65226A2E8EC007BA792 /* mypage.png in Resources */,
 				AC57E61B2699830E007BA792 /* barbackground.png in Resources */,
 				AC57E640269C81E0007BA792 /* weight.png in Resources */,
 				AC57E61826996159007BA792 /* check.png in Resources */,
