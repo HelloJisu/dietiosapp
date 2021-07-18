@@ -500,6 +500,63 @@
             </objects>
             <point key="canvasLocation" x="2064" y="73"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="WLH-dT-AGe">
+            <objects>
+                <viewController id="9SY-Th-JTk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rfu-My-0qP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GbL-dx-ZvC">
+                                <rect key="frame" x="0.0" y="-6" width="414" height="502"/>
+                                <color key="backgroundColor" red="0.15294117647058825" green="0.68235294117647061" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMS-ar-y32">
+                                <rect key="frame" x="19.5" y="44" width="375" height="82"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFILE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Owf-j4-TYO">
+                                        <rect key="frame" x="87.5" y="30" width="200" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="7JW-Xi-gKc"/>
+                                            <constraint firstAttribute="height" constant="22" id="gcH-5H-3E9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Owf-j4-TYO" firstAttribute="centerY" secondItem="JMS-ar-y32" secondAttribute="centerY" id="2UC-6q-XUe"/>
+                                    <constraint firstAttribute="height" constant="82" id="5i1-Ss-PkJ"/>
+                                    <constraint firstItem="Owf-j4-TYO" firstAttribute="centerX" secondItem="JMS-ar-y32" secondAttribute="centerX" id="jCq-1g-Inn"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilenone.png" translatesAutoresizingMaskIntoConstraints="NO" id="1sy-Xj-1Cy">
+                                <rect key="frame" x="0.0" y="144" width="414" height="202"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1NK-2O-CKF"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GbL-dx-ZvC" firstAttribute="width" secondItem="Rfu-My-0qP" secondAttribute="width" id="97Y-fB-RRg"/>
+                            <constraint firstItem="GbL-dx-ZvC" firstAttribute="top" secondItem="1NK-2O-CKF" secondAttribute="top" constant="-50" id="Q0W-1M-6qK"/>
+                            <constraint firstItem="1sy-Xj-1Cy" firstAttribute="bottom" secondItem="GbL-dx-ZvC" secondAttribute="bottom" constant="-150" id="Vou-3P-e4j"/>
+                            <constraint firstItem="1sy-Xj-1Cy" firstAttribute="width" secondItem="Rfu-My-0qP" secondAttribute="width" id="byS-m5-2ep"/>
+                            <constraint firstItem="GbL-dx-ZvC" firstAttribute="height" secondItem="Rfu-My-0qP" secondAttribute="height" multiplier="0.56" id="ckx-Lo-5f9"/>
+                            <constraint firstItem="GbL-dx-ZvC" firstAttribute="centerX" secondItem="1NK-2O-CKF" secondAttribute="centerX" id="hsu-X7-VtA"/>
+                            <constraint firstItem="1sy-Xj-1Cy" firstAttribute="centerX" secondItem="1NK-2O-CKF" secondAttribute="centerX" id="ra3-fU-qHm"/>
+                            <constraint firstItem="JMS-ar-y32" firstAttribute="width" secondItem="1NK-2O-CKF" secondAttribute="width" multiplier="0.905797" id="tW1-xR-JhC"/>
+                            <constraint firstItem="JMS-ar-y32" firstAttribute="top" secondItem="1NK-2O-CKF" secondAttribute="top" id="vhW-Yq-XEu"/>
+                            <constraint firstItem="1sy-Xj-1Cy" firstAttribute="top" secondItem="1NK-2O-CKF" secondAttribute="top" constant="100" id="x1F-jC-WiJ"/>
+                            <constraint firstItem="JMS-ar-y32" firstAttribute="centerX" secondItem="1NK-2O-CKF" secondAttribute="centerX" id="y9s-7c-O4C"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IdP-Wb-qUK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2781" y="73"/>
+        </scene>
         <!--Signin Controller-->
         <scene sceneID="7lp-ro-6qQ">
             <objects>
@@ -1153,6 +1210,7 @@
         <image name="man.png" width="1466" height="3520"/>
         <image name="mypage.png" width="139.63636779785156" height="139.63636779785156"/>
         <image name="noncheck.png" width="35" height="35"/>
+        <image name="profilenone.png" width="118" height="118"/>
         <image name="ripol.png" width="8.6666669845581055" height="16"/>
         <image name="run2.png" width="384" height="384"/>
         <image name="runningman.png" width="2040" height="3494"/>
