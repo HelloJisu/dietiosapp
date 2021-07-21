@@ -10,6 +10,7 @@ import UIKit
 class RullerController: UIViewController,UIScrollViewDelegate {
     
     @IBOutlet weak var framset: UIView!
+    @IBOutlet weak var startbtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,8 +90,19 @@ class RullerController: UIViewController,UIScrollViewDelegate {
     
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset)
+        var setweight : Double
+        setweight = Double(scrollView.contentOffset.x/150.0)
+        startbtn.setTitle(String(round(setweight*10)/10 + 30.0), for: .normal)
+        startbtn.isEnabled = false
         }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        startbtn.isEnabled = true
+    }
+    
+    @IBAction func pressstart(_ sender: Any) {
+        
+    }
     
 
     /*

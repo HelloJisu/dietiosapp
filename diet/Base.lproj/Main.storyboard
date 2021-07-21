@@ -587,21 +587,6 @@
             </objects>
             <point key="canvasLocation" x="2781" y="73"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="lm7-h6-Ulz">
-            <objects>
-                <viewController id="nts-H6-JqR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="c5I-e8-6cU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="8Cu-bF-kiL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Gi-lS-Wgj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3471" y="73"/>
-        </scene>
         <!--Signin Controller-->
         <scene sceneID="7lp-ro-6qQ">
             <objects>
@@ -992,6 +977,9 @@
                                 <state key="normal" title="시작하기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressstart:" destination="YeQ-WX-I9y" eventType="touchDragInside" id="vJo-2d-hO3"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lepol.png" translatesAutoresizingMaskIntoConstraints="NO" id="zUT-K5-kcX">
                                 <rect key="frame" x="17" y="75" width="44" height="18"/>
@@ -1007,6 +995,13 @@
                                 <rect key="frame" x="0.0" y="389" width="414" height="128"/>
                                 <color key="backgroundColor" red="0.15294117647058825" green="0.68235294117647061" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="underarrow2.png" translatesAutoresizingMaskIntoConstraints="NO" id="s0I-Wf-aw4">
+                                <rect key="frame" x="107" y="294" width="200" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="gnW-6M-dC3"/>
+                                    <constraint firstAttribute="width" constant="200" id="mi0-au-lag"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JCG-Nw-dHi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1015,6 +1010,7 @@
                             <constraint firstItem="xcU-Gs-4EC" firstAttribute="centerX" secondItem="JCG-Nw-dHi" secondAttribute="centerX" id="7D6-ya-bVf"/>
                             <constraint firstItem="dQd-UX-Xtd" firstAttribute="centerY" secondItem="zsw-qI-Jgi" secondAttribute="centerY" constant="-4" id="87H-16-mU9"/>
                             <constraint firstItem="dQd-UX-Xtd" firstAttribute="centerX" secondItem="zsw-qI-Jgi" secondAttribute="centerX" id="B5l-57-GPx"/>
+                            <constraint firstItem="s0I-Wf-aw4" firstAttribute="centerX" secondItem="JCG-Nw-dHi" secondAttribute="centerX" id="FF5-4W-WYU"/>
                             <constraint firstItem="zUT-K5-kcX" firstAttribute="leading" secondItem="JCG-Nw-dHi" secondAttribute="leading" constant="17" id="H83-bb-X2N"/>
                             <constraint firstItem="xcU-Gs-4EC" firstAttribute="width" secondItem="blD-Qz-hDV" secondAttribute="width" id="Hyk-Tt-vLh"/>
                             <constraint firstItem="xcU-Gs-4EC" firstAttribute="height" secondItem="blD-Qz-hDV" secondAttribute="height" multiplier="0.142857" id="KPC-Y7-igE"/>
@@ -1026,6 +1022,7 @@
                             <constraint firstItem="V05-jN-v8s" firstAttribute="centerX" secondItem="zUT-K5-kcX" secondAttribute="centerX" id="d0f-mo-BAA"/>
                             <constraint firstItem="jBZ-0V-VYC" firstAttribute="centerX" secondItem="JCG-Nw-dHi" secondAttribute="centerX" id="kKN-u4-WCw"/>
                             <constraint firstItem="zsw-qI-Jgi" firstAttribute="centerX" secondItem="JCG-Nw-dHi" secondAttribute="centerX" id="nkQ-8C-PdT"/>
+                            <constraint firstItem="s0I-Wf-aw4" firstAttribute="top" secondItem="xcU-Gs-4EC" secondAttribute="top" constant="-95" id="oUI-wc-bBl"/>
                             <constraint firstItem="xcU-Gs-4EC" firstAttribute="centerY" secondItem="JCG-Nw-dHi" secondAttribute="centerY" id="sSi-bc-P13"/>
                             <constraint firstItem="dQd-UX-Xtd" firstAttribute="height" secondItem="zsw-qI-Jgi" secondAttribute="height" multiplier="0.8" id="u4K-B2-ela"/>
                             <constraint firstItem="dQd-UX-Xtd" firstAttribute="width" secondItem="zsw-qI-Jgi" secondAttribute="width" multiplier="0.801749" id="wvW-Qv-NYT"/>
@@ -1033,6 +1030,7 @@
                     </view>
                     <connections>
                         <outlet property="framset" destination="xcU-Gs-4EC" id="taF-5E-XH9"/>
+                        <outlet property="startbtn" destination="dQd-UX-Xtd" id="B76-h8-V6J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CxQ-dn-2bP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1235,6 +1233,7 @@
         <image name="ripol.png" width="8.6666669845581055" height="16"/>
         <image name="run2.png" width="384" height="384"/>
         <image name="runningman.png" width="2040" height="3494"/>
+        <image name="underarrow2.png" width="1695" height="1468"/>
         <image name="weight.png" width="139.63636779785156" height="139.63636779785156"/>
         <image name="weightpointer.png" width="37.636363983154297" height="34.090908050537109"/>
         <image name="wlepo.png" width="8.5" height="15.5"/>
