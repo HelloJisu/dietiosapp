@@ -12,6 +12,8 @@ class RullerController: UIViewController,UIScrollViewDelegate {
     @IBOutlet weak var framset: UIView!
     @IBOutlet weak var startbtn: UIButton!
     
+    var setweight : Double = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         var frm: CGRect = framset.frame
@@ -22,7 +24,6 @@ class RullerController: UIViewController,UIScrollViewDelegate {
         scrollView.showsHorizontalScrollIndicator = false
        
         
-
         let minTemp = 30.0
         let maxTemp = 150.0
         let interval = 0.1
@@ -90,7 +91,6 @@ class RullerController: UIViewController,UIScrollViewDelegate {
     
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        var setweight : Double
         setweight = Double(scrollView.contentOffset.x/150.0)
         startbtn.setTitle(String(round(setweight*10)/10 + 30.0), for: .normal)
         startbtn.isEnabled = false
@@ -100,8 +100,12 @@ class RullerController: UIViewController,UIScrollViewDelegate {
         startbtn.isEnabled = true
     }
     
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        startbtn.isEnabled = true
+    }
+    
     @IBAction func pressstart(_ sender: Any) {
-        
+        UserDefaults.standard.set(String(round(setweight*10)/10 + 30.0), forKey: "nowweight")
     }
     
 
